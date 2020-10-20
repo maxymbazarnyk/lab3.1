@@ -20,9 +20,9 @@ int main() {
 
     // спосіб 1: розгалуження в скороченій формі     
     if (x<=0)         
-        B = log(fabs(sin(x)) + pow(x, 7));     
+        B = log(fabs(sin(x))) + pow(x, 7);     
     if (0<x && x<=3)         
-        B = 1/tan(fabs(x+1)/2);     
+        B = 1./tan(fabs(x+1)/2);     
     if (x>3)         
         B = 3 * x - pow(x, 5); 
 
@@ -34,10 +34,10 @@ int main() {
 
     // спосіб 2: розгалуження в повній формі     
     if (x <= 0)
-        B = log(fabs(sin(x)) + pow(x, 7));
+        B = log(fabs(sin(x))) + pow(x, 7);
     else         
         if (0 < x && x <= 3)
-            B = 1 / tan(fabs(x + 1) / 2);
+            B = 1. / tan(fabs(x + 1) / 2);
         else             
             B = 3 * x - pow(x, 5);
 
